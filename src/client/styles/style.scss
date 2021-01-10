@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;900&display=swap");
+
+body {
+    background: #eff2f5;
+    display: flex;
+    place-items: center;
+    font-family: "Roboto Mono", monospace;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+main {
+    width: 80%;
+}
+
+section {
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+h1 {
+    font-size: 1.3em;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 0.9em;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+p {
+    font-size: 0.7em;
+    margin-top: 1px;
+}
+
+label {
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-size: 0.8em;
+}
+
+strong {
+    font-weight: 900;
+}
+
+label,
+input,
+button {
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+input {
+    background: #eff2f5;
+    padding: 0px 20px;
+    height: 40px;
+    border-radius: 6px;
+    box-shadow: inset 1px 1px 1px #cfd3d6, inset -1px -1px 1px #ffff;
+}
+
+input:hover {
+    box-shadow: inset 3px 3px 3px #cfd3d6, inset -3px -3px 3px #ffff;
+}
+
+input#place {
+    text-transform: capitalize;
+}
+
+button {
+    margin-top: 20px;
+    color: white;
+    background: orangered;
+    height: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 5px 5px 5px #cfd3d6, -5px -5px 5px white;
+    transition: 0.5s;
+}
+
+button:hover {
+    box-shadow: none;
+}
+
+.container {
+    box-shadow: 13px 13px 19px #cfd3d6, -14px -14px 20px white;
+    background: #eff2f5;
+    box-sizing: border-box;
+    border-radius: 19px;
+    padding: 30px;
+}
+
+.form-content {
+    margin-top: 20px;
+}
+
+.loader {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #ff4500;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin-left: 5px;
+    position: absolute !important;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.card {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: rgba(51, 51, 51, 0.5);
+    background-blend-mode: multiply;
+    color: white;
+    padding: 30px;
+    margin-bottom: 23px;
+}
+
+.card-note {
+    font-size: 0.5em;
+}
+
+
+.alert {
+    font-size: 0.7em;
+    padding: 15px;
+    background-color: yellow;
+    color: black;
+    margin-bottom: 30px;
+    display: none;
+}
+
+
+.close-btn {
+    margin-left: 15px;
+    color: black;
+    float: right;
+    font-size: 20px;
+    line-height: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: gray;
+}
+
+/* For wide screens 768px*/
+@media (min-width: 768px) {
+    .grid-container {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 2fr 2fr 1fr;
+    }
+
+    button {
+        margin-top: 28px;
+    }
+}
